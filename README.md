@@ -1,13 +1,13 @@
-### co源码学习
-* co源码： https://github.com/tj/co
+### co源码学习 
+* co源码： https://github.com/tj/co 
 * 简介：
-  * （1) 传入generator函数，将内部yield同步执行
+  * （1) 传入generator，将内部yield同步执行
   * （2）co只允许yield a function, promise, generator, array, object，且array或者object里值也必须是这些类型
 * 原理：
-  * （1）generator函数 + promise
+  * （1）generator + promise
   * （2）将所有的yield返回，转成promise，并执行promise.then。 
   * （3）递归的next()
-* co源代码 + 代码注释 ：
+* co源代码注释如下：
 ```
 
 /**
